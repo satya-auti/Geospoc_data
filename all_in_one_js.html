@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage JS Program</title>
+    <script>
+        let arr = [
+            {
+                id : 1,
+                name : "Satyawan",
+                address : "Pune",
+                company : "Geospoc",
+                Language :  [ 'English', 'Marathi', 'Hindi', 'Gujarati'],
+                Experience : 3.5,
+                Status : "Working"
+            },
+            {
+                id : 2,
+                name : "Priyanka",
+                address : "Bota",
+                company : "Amsa Infotech",
+                Language :  [ 'English', 'Marathi', 'Hindi' ],
+                Experience : 2.5,
+                Status : "Working"
+            },
+            {
+                id : 3,
+                name : "Aniket",
+                address : "Khodad",
+                company : "Geospoc",
+                Language :  [ 'English', 'Marathi', 'Hindi' ],
+                Experience : 5.0,
+                Status : "Working"
+            },
+            {
+                id : 4,
+                name : "Prasad",
+                address : "Rajuri",
+                company : "Wipro",
+                Language :  [ 'English', 'Marathi', 'Hindi' ],
+                Experience : 3.5,
+                Status : "Working"
+            },
+            {
+                id : 5,
+                name : "Rachana",
+                address : "Karad",
+                company : "Wipro",
+                Language :  [ 'English', 'Marathi', 'Hindi', 'Telgu'],
+                Experience : 3.5,
+                Status : "Bench"
+            },
+            {
+                id : 6,
+                name : "Nikhil",
+                address : "Bhor",
+                company : "Wipro",
+                Language :  [ 'English', 'Marathi', 'Hindi'],
+                Experience : 3.5,
+                Status : "Serving Notice Period"
+            },
+        ];
+
+        console.log(arr);
+
+        // console.log("Wipro Employees");
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     if(arr[i].company == "Wipro"){
+        //         console.log(arr[i]);
+        //     }
+            
+        // }
+        // console.log("array method -> Wipro Employees");
+        // let x = arr.filter(e => {
+        //     if(e.company == "Wipro") {
+        //         console.log(e);
+        //     }
+        // });
+
+        // console.log("GeoSpoc Employees");
+        // for (let i = 0; i < arr.length; i++) {
+        //     if(arr[i].company == "Geospoc"){
+        //         console.log(arr[i]);
+        //     }
+            
+        // }
+        // console.log("array method -> Geospoc Employees");
+        // let y = arr.filter(e => {
+        //     if(e.company == "Geospoc") {
+        //         console.log(e);
+        //     }
+        // });
+
+        // console.log("Language Known");
+        // console.log(arr[2].Language[1]);
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     for (let j = 0; j < arr[i].Language.length; j++) {
+            
+        //         if(arr[i].Language[j] == "Telgu"){
+        //             console.log(arr[i]);
+        //         }
+                
+        //     }
+            
+        // }
+
+        // console.log("array method -> Language Known");
+        // let z = arr.filter(lang => {
+        
+        //     let abc1 = lang.Language;
+        //     abc1.filter(l => {
+        //         if (l == "Gujarati") {
+        //             console.log(lang);
+        //         }
+        //     });
+           
+        // });
+
+        // Rest Operator
+        // let arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // let [ cb , xt, ...ab] = arr1;
+        // console.log("Cb is "+cb);
+        // console.log("XT is " +xt);
+        // console.log("rest operator "+ab);
+
+        // Mapping employee with company name
+       let geo =  arr.map(co => {
+            if (co.company) {
+                return co.company;
+                // return "Geospoc ";
+                // console.log(co);
+            } 
+            // if (co.company == "Wipro") {
+            //     return "Wipro ";
+            //     // console.log(co);
+            // } 
+            // else{
+            //     return "Outside Geospoc ";
+            // }
+        });
+        console.log(geo);
+
+        // let inc = arr.includes(arr.company == "Geospoc");
+        // console.log(inc);   
+
+        // // Filter with Name Satyawan
+        // arr.filter(inc1 => {
+        //     if (inc1.name == "Satyawan") {
+        //         // console.log(inc1);
+        //         console.log("Satya is present");
+        //     }
+        // });
+
+
+        // arr.find(inc1 => {
+        //     if (inc1.company == "Wipro") {
+        //         // console.log(inc1);
+        //         // return "Satya is Present";
+        //         console.log("Employees from Wipro is present");
+        //     }
+        // });
+
+        // // Listing Employees from Wipro
+        // arr.forEach(inc1 => {
+        //     if (inc1.company == "Wipro") {
+        //         // console.log(inc1);
+        //         // return "Satya is Present";
+        //         console.log("Employees from Wipro is present");
+        //         console.log(inc1);
+        //     }
+        // });
+
+        // mapping Working status of Employee
+        // let ben = arr.map(inc1 => {
+        //     if (inc1.Status == 2) {
+        //         // console.log(inc1);
+        //         return "bench";
+        //         console.log("Employee with ID -> 2 is present");
+        //         console.log(inc1);
+        //     }
+        //     else{
+        //         return "working";
+        //     }
+        // });
+        // console.log(ben);
+
+        // let ben = arr.map(inc1 => {
+        //     if (inc1.Status) {
+        //         // console.log(inc1);
+        //         return inc1.Status;
+        //         // console.log("Employee with ID -> 2 is present");
+        //         // console.log(inc1);
+        //     }
+        //     // else{
+        //     //     return "working";
+        //     // }
+        // });
+        // console.log(ben);
+
+        // Mapping employee with greater 3 years of experience.
+        // let experience = arr.map(exp => {
+        //     if (exp.Experience >= 3) {
+        //         return "greater than 3";
+        //     }else{
+        //         return "less than 3";
+        //     }
+        // });
+        // console.log(experience);
+
+        // // Array.includes() method
+        // let arr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        //     if (arr2.includes(10)) {
+        //         console.log("Number present in array");
+        //     }
+        //     else{
+        //         console.log("Entered Number is Missing");
+        //     }
+        
+        // // Set() removes Duplicate values
+        // let arr3 = ['A', 'B', 'C', 'F', 'D', 'E', 'A', 'C', 'D', 9, 3, 5, 3, ];
+        // let unique = new Set(arr3);
+        // console.log(unique);
+
+    </script>
+</head>
+<body>
+    <h1>Welcome to GeoSpoc an ola company.</h1>
+</body>
+</html>
