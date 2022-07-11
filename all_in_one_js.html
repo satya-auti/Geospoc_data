@@ -7,63 +7,73 @@
     <title>Webpage JS Program</title>
     <script>
         let arr = [
-            {
-                id : 1,
-                name : "Satyawan",
-                address : "Pune",
-                company : "Geospoc",
-                Language :  [ 'English', 'Marathi', 'Hindi', 'Gujarati'],
-                Experience : 3.5,
-                Status : "Working"
-            },
-            {
-                id : 2,
-                name : "Priyanka",
-                address : "Bota",
-                company : "Amsa Infotech",
-                Language :  [ 'English', 'Marathi', 'Hindi' ],
-                Experience : 2.5,
-                Status : "Working"
-            },
-            {
-                id : 3,
-                name : "Aniket",
-                address : "Khodad",
-                company : "Geospoc",
-                Language :  [ 'English', 'Marathi', 'Hindi' ],
-                Experience : 5.0,
-                Status : "Working"
-            },
-            {
-                id : 4,
-                name : "Prasad",
-                address : "Rajuri",
-                company : "Wipro",
-                Language :  [ 'English', 'Marathi', 'Hindi' ],
-                Experience : 3.5,
-                Status : "Working"
-            },
-            {
-                id : 5,
-                name : "Rachana",
-                address : "Karad",
-                company : "Wipro",
-                Language :  [ 'English', 'Marathi', 'Hindi', 'Telgu'],
-                Experience : 3.5,
-                Status : "Bench"
-            },
-            {
-                id : 6,
-                name : "Nikhil",
-                address : "Bhor",
-                company : "Wipro",
-                Language :  [ 'English', 'Marathi', 'Hindi'],
-                Experience : 3.5,
-                Status : "Serving Notice Period"
-            },
+                    {
+                        id : 1,
+                        name : "Satyawan",
+                        address : "Pune",
+                        company : "Geospoc",
+                        Language :  [ 'English', 'Marathi', 'Hindi', 'Gujarati'],
+                        Experience : 3.5,
+                        Status : "Working"
+                    },
+                    {
+                        id : 2,
+                        name : "Priyanka",
+                        address : "Bota",
+                        company : "Amsa Infotech",
+                        Language :  [ 'English', 'Marathi', 'Hindi' ],
+                        Experience : 2.5,
+                        Status : "Working"
+                    },
+                    {
+                        id : 3,
+                        name : "Aniket",
+                        address : "Khodad",
+                        company : "Geospoc",
+                        Language :  [ 'English', 'Marathi', 'Hindi' ],
+                        Experience : 5.0,
+                        Status : "Working"
+                    },
+                    {
+                        id : 4,
+                        name : "Prasad",
+                        address : "Rajuri",
+                        company : "Wipro",
+                        Language :  [ 'English', 'Marathi', 'Hindi' ],
+                        Experience : 3.5,
+                        Status : "Working"
+                    },
+                    {
+                        id : 5,
+                        name : "Rachana",
+                        address : "Karad",
+                        company : "Wipro",
+                        Language :  [ 'English', 'Marathi', 'Hindi', 'Telgu'],
+                        Experience : 3.5,
+                        Status : "Bench"
+                    },
+                    {
+                        id : 6,
+                        name : "Nikhil",
+                        address : "Bhor",
+                        company : "Wipro",
+                        Language :  [ 'English', 'Marathi', 'Hindi'],
+                        Experience : 3.5,
+                        Status : "Serving Notice Period"
+                    },
         ];
 
         console.log(arr);
+
+        // Print all the data of employees with languange marathi
+        arr.filter(lang => {
+            lang.Language.filter(m => {
+                if(m == "Marathi")
+                {
+                    console.log(lang);
+                }
+            });
+        });
 
         // console.log("Wipro Employees");
 
@@ -113,14 +123,14 @@
         
         //     let abc1 = lang.Language;
         //     abc1.filter(l => {
-        //         if (l == "Gujarati") {
+        //         if (l == "Telgu") {
         //             console.log(lang);
         //         }
         //     });
            
         // });
 
-         //     // Mapping employee with company name
+    //          // Mapping employee with company name
     //    let geo =  arr.map(co => {
     //         if (co.company) {
     //             return co.company;
@@ -167,7 +177,7 @@
         //     }
         // });
 
-        // mapping Working status of Employee
+        // // mapping Working status of Employee
         // let ben = arr.map(inc1 => {
         //     if (inc1.Status == 2) {
         //         // console.log(inc1);
@@ -194,7 +204,7 @@
         // });
         // console.log(ben);
 
-        // Mapping employee with greater 3 years of experience.
+        // // Mapping employee with greater 3 years of experience.
         // let experience = arr.map(exp => {
         //     if (exp.Experience >= 3) {
         //         return "greater than 3";
@@ -524,24 +534,33 @@
         // }
 
 
-            // let Variable
-            for (let i = 0; i < 5; i++) {
-                console.log(i);
-            }
-            console.log(i);
+            // // let Variable
+            // for (let i = 0; i < 5; i++) {
+            //     console.log(i);
+            // }
+            // console.log(i);
 
             // // var Variable
-            // for (let j = 0; j < 5; j++) {
+            // for (var j = 0; j < 5; j++) {
             //     console.log(j);
             // }
             // console.log(j);
 
-            // // Const Variable
-            // for (let a = 0; a < 5; a++) {
+            // Const Variable
+            // for (const a = 0; a < 5; a++) {
             //     console.log(a);
             // }
             // console.log(a);
 
+            // Array & Object Destructuring 
+            // let array3 = ['A', 'B', 'C', 'D', 'F', 'E', 'G'];
+            // let object1 = {name : 'Satya', address : "Rajuri", company : "Geospoc", position : "SDE1"};
+
+            // let [a,b,c,d,...r] = array3;
+            // console.log("a is "+a+ ", b is "+b+", c is "+c+", d is "+d+", rest is "+r);
+
+            // let {name, address, company, position} = object1;
+            // console.log("name is "+name+ ", address is "+address+", company is "+company+", position is "+position+" , ");
 
         // classes
 
