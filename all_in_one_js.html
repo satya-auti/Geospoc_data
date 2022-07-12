@@ -65,15 +65,15 @@
 
         console.log(arr);
 
-        // Print all the data of employees with languange marathi
-        arr.filter(lang => {
-            lang.Language.filter(m => {
-                if(m == "Marathi")
-                {
-                    console.log(lang);
-                }
-            });
-        });
+        // // Print all the data of employees with languange marathi
+        // arr.filter(lang => {
+        //     lang.Language.filter(m => {
+        //         if(m == "Marathi")
+        //         {
+        //             console.log(lang);
+        //         }
+        //     });
+        // });
 
         // console.log("Wipro Employees");
 
@@ -562,7 +562,132 @@
             // let {name, address, company, position} = object1;
             // console.log("name is "+name+ ", address is "+address+", company is "+company+", position is "+position+" , ");
 
+            // Objects
+            // // object.keys() method -> shows the keys properties of object 
+            // console.log("object.keys() method")
+            // const object1 = {
+            //                     a: 'somestring',
+            //                     b: 42,
+            //                     c: false
+            // };
+
+            // console.log(Object.keys(object1));
+            // // expected output: Array ["a", "b", "c"]
+
+            // // Object.freeze() method -> The Object.freeze() method freezes an object. A frozen object can no longer be changed; freezing an object prevents new properties from being added to it,
+            // console.log(" Object.freeze() method")
+            // const obj = {
+            //                 prop: 42
+            // };
+
+            // Object.freeze(obj);
+
+            // obj.prop = 33;
+            // obj.name = "satya";
+            // // Throws an error in strict mode
+
+            // console.log(obj.prop);
+            // console.log(obj.name);
+            // // expected output: 42
+
+            // // The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object.
+            // console.log(" The Object.assign() method ");
+            // // const target = { a: 1, b: 2 };
+            // // const source = { b: 4, c: 5 };
+
+            // const target = { a: 1, b: 2, c: 3 };
+            // const source = { b: 4, c: 5, e: 7 };
+
+            // const returnedTarget = Object.assign(target, source);
+
+            // console.log(target);
+            // // expected output: Object { a: 1, b: 4, c: 5 }
+
+            // console.log(returnedTarget);
+            // // expected output: Object { a: 1, b: 4, c: 5 }
+
+            // // The Object.create() method creates a new object, using an existing object as the prototype of the newly created o
+            // console.log("The Object.create() method");
+            // const person = {
+            //                     isHuman: false,
+            //                     printIntroduction: function() {
+            //                         console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+            //                         console.log("My name is "+this.name+". Am I human? "+this.isHuman);
+            //                     }
+            // };
+
+            // const me = Object.create(person);
+
+            // me.name = 'Satya'; // "name" is a property set on "me", but not on "person"
+            // me.isHuman = true; // inherited properties can be overwritten
+
+            // me.printIntroduction();
+            // // expected output: "My name is Satya. Am I human? true"
+
+            // // Object.prototype.toString() -> The toString() method returns a string representing the objec
+            // console.log("Object.prototype.toString() -> The toString() method");
+            // function Dog(name) {
+            //          this.name = name;
+            // }
+
+            // const dog1 = new Dog('Tommy');
+
+            // // Dog.toString = function dogToString() {
+            // // return `${this.name}`;
+            // // return +this.name;
+            // // };
+
+            // Dog.prototype.toString = function dogToString() {
+            // return `${this.name}`;
+            // // return +this.name;
+            // //  console.log(this.name);
+            // };
+
+            // console.log(dog1.toString());
+            // // expected output: "Tommy"
+
+            // // Object.prototype.constructor - > The constructor property returns a reference to the Object constructor function that created the instance object. Note that the value of this property is a reference to the function itself, not a string containing the function's name.
+            // let o = {}
+            // // o.constructor === Object // true
+            // if (o.constructor === Object) {
+            //     console.log("true"); 
+            // }
+
+            // let o1 = new Object
+            // o1.constructor === Object // true
+
+            // let a = []
+            // a.constructor === Array // true
+
+            // let a1 = new Array
+            // a1.constructor === Array // true
+
+            // let n = new Number(3)
+            // n.constructor === Number // true
+
+
+            
         // classes
+        // unnamed
+        let Rectangle = class {
+                                constructor(height, width) {
+                                                                this.height = height;
+                                                                this.width = width;
+                                }
+        };
+        console.log(Rectangle.name);
+        // output: "Rectangle"
+
+        // named
+        Rectangle = class Rectangle2 {
+                                        constructor(height, width) {
+                                                                        this.height = height;
+                                                                        this.width = width;
+                                        }
+        };
+        console.log(Rectangle.name);
+        // output: "Rectangle2"
+
 
     </script>
 </head>
