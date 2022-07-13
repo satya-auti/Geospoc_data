@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Functions</title>
+    <script>
+        let arr = [
+            {
+                fname : "Satyawan Auti",
+                age : 26
+            },
+            {
+                fname : "Suraj Chavan",
+                age : 27
+            },
+            {
+                fname : "Vishal Shinde",
+                age : 24
+            },
+            {
+                fname : "Dhiraj Zurule",
+                age : 23
+            },
+            {
+                fname : "Mayur Wakikar",
+                age : 25
+            },
+        ];
+        console.log(arr);
+
+        // let edit = arr.map(ele =>{
+        //      ele.fname, ele.age,
+        // });
+
+        let edit = arr.map(ele =>{
+            // let name = ele : fname;
+            let name1  = ele.fname.split(" ");
+            // let [firstName, lastName] = ele.fname.split(" ");
+            console.log(name1);
+            return { 
+                    fname : name1[0],
+                    lname : name1[1],
+                    age : ele.age,
+
+                    // firstName : firstName,
+                    // lastName : lastName,
+                    // age : ele.age,
+                    
+                    // firstName,
+                    // lastName,
+                    // age : ele.age,
+
+
+                    // ele.fname : name1[0],
+                    // ele.lname : name1[1],
+                    // ele.age : age,
+            
+                    // ele.name1[0],
+                    // ele.name1[1],
+                    // ele : fname,
+                    
+            };
+        });
+
+        console.log(edit);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
