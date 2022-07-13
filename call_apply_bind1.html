@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Call Apply Bind Methods</title>
+    <title>Call Apply Bind Methods & this Keyword</title>
     <script>
         // this Keyword 
         console.log("this Keyword ")
@@ -38,29 +38,25 @@
             };
 
             // let fullName = function (hometown,state) {
-            let fullName = function (city) {
-                // console.log(this.firstName + " " + this.lastName ); 
-                console.log(this.firstName + " " + this.lastName+" from "+city );    
+            let fullName = function () {
+                console.log(this.firstName + " " + this.lastName ); 
+                // console.log(this.firstName + " " + this.lastName+" from "+city );    
                 // console.log(this.firstName + " " + this.lastName + " from " + hometown + " , " + state);
             };
 
-            
-            // fullName.call(name);
-            // fullName.call(name, "Rajuri","MH");
-            // fullName.call(name, "Rajuri", "MH");
 
             console.log("function borrowing");
             // name.fullName.call(name2); ->all_in_one_js.html:886 Uncaught TypeError: Cannot read properties of undefined (reading 'call')
-            // fullName.call(name2, "Rajuri", "MH");
+            // fullName.call(name2, "Pune", "MH");
             
             // The call() method is a predefined JavaScript method. 
             // It can be used to invoke (call) a method with an owner object as an argument (parameter). 
             // With call() , an object can use a method belonging to another object.
 
             console.log("call() method ");
-            // fullName.call(name);
-            fullName.call(name, "Pune");
-            // fullName.call(name, "Rajuri", "MH");
+            fullName.call(name);
+            // fullName.call(name, "Pune");
+            // fullName.call(name, "Pune", "MH");
             // in call() we pass agruments individually 
 
 
@@ -75,6 +71,7 @@
             // fullName.apply(name2, ["Bota", "MH"]);
             // in apply() method we pass agruments in array list
 
+            // Bind method--->
             // We use the Bind() method to call a function with the this value, 
             // this keyword refers to the same object which is currently selected . 
             // In other words, bind() method allows us to easily set which object 
@@ -82,75 +79,13 @@
 
             console.log("bind() method ");
             // bind() -> invoke function / keep a copy of that method & use it later
-            // let printName = fullName.bind(name,"Rajuri", "MH");
-            // let printName = fullName.bind(name);
-            let printName = fullName.bind(name,"Pune");
+        
+            let printName = fullName.bind(name);
+            // let printName = fullName.bind(name,"Pune");
+            // let printName = fullName.bind(name,"Pune", "MH");
             console.log(printName);
             printName();
 
-
-            // let name2 = {
-            //     firstName : "Priyanka",
-            //     lastName : "Auti"
-            // };
-            // // function borrowing
-            // console.log("function borrowing");
-            // // name.fullName.call(name2); ->all_in_one_js.html:886 Uncaught TypeError: Cannot read properties of undefined (reading 'call')
-            // // fullName.call(name2, "Rajuri", "MH");
-            
-            // console.log("call() method ");
-            // fullName.call(name2, "Bota", "MH");
-            // // in call() we pass agruments individually 
-
-            // console.log("apply() method ");
-            // // fullName.apply(name2, ["Bota", "MH"]);
-            // fullName.apply(name2, ["Bota", "MH"]);
-            // // in apply() method we pass agruments in array list
-
-            // // bind() -> invoke function / keep a copy of that method & use it later
-            // let printName = fullName.bind(name2,"Bota", "MH");
-            // console.log(printName);
-            // printName();
-
-
-            // let name = {
-            //     firstName : "Satyawan",
-            //     lastName : "Auti", 
-            // };
-
-            // let fullName = function (hometown,state) {
-                
-            //     // console.log(this.firstName + " " + this.lastName );    
-            //     console.log(this.firstName + " " + this.lastName + " from " + hometown + " , " + state);
-            // };
-
-            
-            // // fullName.call(name);
-            // // fullName.call(name, "Rajuri","MH");
-            // fullName.call(name, "Rajuri", "MH");
-
-            // let name2 = {
-            //     firstName : "Priyanka",
-            //     lastName : "Auti"
-            // };
-            // // function borrowing
-            // console.log("function borrowing");
-            // // name.fullName.call(name2); ->all_in_one_js.html:886 Uncaught TypeError: Cannot read properties of undefined (reading 'call')
-            // // fullName.call(name2, "Rajuri", "MH");
-            
-            // console.log("call() method ");
-            // fullName.call(name2, "Bota", "MH");
-            // // in call() we pass agruments individually 
-
-            // console.log("apply() method ");
-            // // fullName.apply(name2, ["Bota", "MH"]);
-            // fullName.apply(name2, ["Bota", "MH"]);
-            // // in apply() method we pass agruments in array list
-
-            // // bind() -> invoke function / keep a copy of that method & use it later
-            // let printName = fullName.bind(name2,"Bota", "MH");
-            // console.log(printName);
-            // printName();
             
     </script>
 </head>
