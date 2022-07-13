@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Call Apply Bind methods</title>
+    <script>
+        // // this Keyword 
+        // const test = {
+        //     prop: 42,
+        //     // top: 11,
+        //     func: function() {
+        //         // console.log(this.top);
+        //         return this.prop;
+        //     },
+        // };
+
+        // console.log(test.func());
+        // // expected output: 42
+
+
+            // var obj = {
+            //     x: 81,
+            //     getX: function() {
+            //         return this.x;
+            //     }
+            // };
+
+            // alert(obj.getX.bind(obj)());
+            // alert(obj.getX.call(obj));
+            // alert(obj.getX.apply(obj));
+
+            // // Apply() Method -> The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).
+            // console.log("Apply() Method");
+
+            // const numbers = [5, 6, 2, 3, 7];
+
+            // const max = Math.max.apply(this,numbers);
+            // // const max = Math.max.apply(null, numbers);
+
+            // console.log(max);
+            // // expected output: 7
+
+            // const min = Math.min.apply(this,numbers);
+            // // const min = Math.min.apply(null, numbers);
+
+            // console.log(min);
+            // // expected output: 2
+
+
+            // // Function.prototype.bind() -> The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+            // console.log("Bind() Method");
+
+            // const module = {
+            //     x : 42,
+            //     getX : function() {
+            //         return this.x;
+            //     }
+            // };
+
+            // const unboundGetX = module.getX;
+            // console.log(unboundGetX()); // The function gets invoked at the global scope
+            // // expected output: undefined
+
+            // const boundGetX = unboundGetX.bind(module);
+            // console.log(boundGetX());
+            // // expected output: 42
+
+
+            // // Function.prototype.call() - > The call() method calls a function with a given this value and arguments provided individually.
+            
+            // console.log("Call() method");
+            // function Product(name, price) {
+            //     this.name = name;
+            //     this.price = price;
+            // }
+
+            // function Food(name, price) {
+            //     Product.call(this, name, price);
+            //     this.category = 'food';
+            // }
+
+            // console.log(new Food('cheese', 5).name);
+            // // expected output: "cheese"
+
+
+            // // Function.prototype.toString() - >  The toString() method returns a string representing the source code of the function.
+            // function sum(a, b) {
+            //     return a + b;
+            // }
+
+            // console.log(sum.toString());
+            // // expected output: "function sum(a, b) {
+            // //                     return a + b;
+            // //                   }"
+
+            // console.log(Math.abs.toString());
+            // // expected output: "function abs() { [native code] }"
+
+            // Call()
+            // let name = {
+            //     firstName : "Satyawan",
+            //     lastName : "Auti",
+            //     fullName : function () {
+            //         console.log(this.firstName +" "+this.lastName);
+            //     }
+            // }
+
+            // name.fullName();
+
+            let name = {
+                firstName : "Satyawan",
+                lastName : "Auti",
+               
+            };
+
+            let fullName = function (hometown,state) {
+                
+                // console.log(this.firstName + " " + this.lastName );    
+                console.log(this.firstName + " " + this.lastName + " from " + hometown + " , " + state);
+            };
+
+            
+            // fullName.call(name);
+            // fullName.call(name, "Rajuri","MH");
+            fullName.call(name, "Rajuri", "MH");
+
+            let name2 = {
+                firstName : "Priyanka",
+                lastName : "Auti"
+            };
+            // function borrowing
+            console.log("function borrowing");
+            // name.fullName.call(name2); ->all_in_one_js.html:886 Uncaught TypeError: Cannot read properties of undefined (reading 'call')
+            // fullName.call(name2, "Rajuri", "MH");
+            
+            console.log("call() method ");
+            fullName.call(name2, "Bota", "MH");
+            // in call() we pass agruments individually 
+
+            console.log("apply() method ");
+            // fullName.apply(name2, ["Bota", "MH"]);
+            fullName.apply(name2, ["Bota", "MH"]);
+            // in apply() method we pass agruments in array list
+
+            // bind() -> invoke function / keep a copy of that method & use it later
+            let printName = fullName.bind(name2,"Bota", "MH");
+            console.log(printName);
+            printName();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

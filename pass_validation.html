@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function verifyPassword(){
+
+        //     var password=document.getElementById("txtPwd").value;
+        //     alert(password);
+        //     var msg=document.getElementById("msg");
+        //     if(password.length<4){
+        //             msg.innerHTML="poor password";
+        //         }else{
+        //             msg.innerHTML="Weak Password";
+        //         }
+            
+        //     var regExp=/(?=.*[A-Z])\w{4,15}/;
+        //     if(password.match(regExp)){
+        //         msg.innerHTML="Strong Password";
+        //     } else{
+               
+        //     }
+        //     event.preventDefault(event);
+        // }
+        function verifyPassword(){
+            var password=document.getElementById("txtPwd").value;
+            var msg=document.getElementById("msg");
+            var regExp=/(?=.*[A-Z])\w{4,15}/;
+            if(password.match(regExp)){
+                msg.innerHTML="Strong Password";
+            } else{
+                if(password.length<4){
+                    msg.innerHTML="poor password";
+                }else{
+                    msg.innerHTML="Weak Password";
+                }
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Password</legend>
+        <input type="password" id="txtPwd" onkeyup="verifyPassword()" >
+        <!-- <button type="button" name="Check" onclick="verifyPassword()"  value="Check">Check</button> -->
+        <span id="msg"></span>
+        <!-- <button onclick="SubmitClick()">Submit</button> -->
+    </fieldset>
+</body>
+</html>

@@ -584,11 +584,20 @@
 
             // obj.prop = 33;
             // obj.name = "satya";
-            // // Throws an error in strict mode
-
+            //   // // Throws an error in strict mode
             // console.log(obj.prop);
             // console.log(obj.name);
-            // // expected output: 42
+            // // // expected output: 42
+
+            // const arr10 = [1,2,3,35,34];
+            
+            // Object.freeze(arr10);
+            // // arr10.push(123);
+            // console.log(arr10);
+            // console.log(arr10[5]);
+          
+
+            
 
             // // The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object.
             // console.log(" The Object.assign() method ");
@@ -669,25 +678,264 @@
             
         // classes
         // unnamed
-        let Rectangle = class {
-                                constructor(height, width) {
-                                                                this.height = height;
-                                                                this.width = width;
-                                }
-        };
-        console.log(Rectangle.name);
-        // output: "Rectangle"
+        // let Rectangle = class {
+        //                         constructor(height, width) {
+        //                                                         this.height = height;
+        //                                                         this.width = width;
+        //                         }
+        // };
+        // console.log(Rectangle.name);
+        // // output: "Rectangle"
 
-        // named
-        Rectangle = class Rectangle2 {
-                                        constructor(height, width) {
-                                                                        this.height = height;
-                                                                        this.width = width;
-                                        }
-        };
-        console.log(Rectangle.name);
-        // output: "Rectangle2"
+        // // named
+        // Rectangle = class Rectangle2 {
+        //                                 constructor(height, width) {
+        //                                                                 this.height = height;
+        //                                                                 this.width = width;
+        //                                 }
+        // };
+        // console.log(Rectangle.name);
+        // // output: "Rectangle2"
 
+
+        // let arr9 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // // console.log(delete arr9[2]);
+        // console.log(arr9);
+        // // arr9.splice(2,2,15,16);
+        // arr9.splice(2,1);
+        // console.log(arr9);
+
+        // function resolveAfter2Seconds() {
+        //     return new Promise(resolve => {
+        //         setTimeout(() => {
+        //         resolve('resolved');
+        //         }, 2000);
+        //     });
+        // }
+
+        //     async function asyncCall() {
+        //     console.log('calling');
+        //     const result = await resolveAfter2Seconds();
+        //     console.log(result);
+        //     // expected output: "resolved"
+        // }
+
+        // asyncCall();
+
+        // let count = true;
+        // new Promise 
+
+        // const myPromise = new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve('foo');
+        //         }, 3000);
+        // });
+        
+        //     let demo = true;
+        // let myPromise = new Promise(function(myResolve, myReject) {
+        // // "Producing Code" (May take some time)
+
+        //     setTimeout(() => {
+        //         if(demo) {
+
+                    
+        //         }
+        //                 // resolve('foo');
+        //                 // myResolve();
+        //             }, 3000);
+            
+        // myResolve(); // when successful
+        // myReject();  // when error
+        // });
+
+        // // "Consuming Code" (Must wait for a fulfilled Promise)
+        // myPromise.then(
+        // function(value) { /* code if successful */
+        //     console.log(" It is true.");
+        // },
+        // function(error) { /* code if some error */ 
+        //     console.log("It is false ");
+        // }
+        // );
+
+        // // Callback Functions
+        // function greeting(name) {
+        //     alert('Hello ' + name);
+        // }
+
+        // function processUserInput(callback) {
+        //     var name = prompt('Please enter your name.');
+        //     // callback(name);
+        //     greeting(name);
+        // }
+
+        // processUserInput(greeting);
+
+            // var a =10;
+            // var a= 12;
+            // let b = 12;
+            // let b =125;
+            // console.log("scope"+a,b);
+
+
+        // function init() {
+        //     var name = 'Mozilla'; // name is a local variable created by init
+        //         function displayName() {
+        //             // displayName() is the inner function, a closure
+        //             console.log(name); // use variable declared in the parent function
+        //         }
+        //     displayName();
+        // }
+        // init();
+
+        // // this Keyword 
+        // const test = {
+        //     prop: 42,
+        //     // top: 11,
+        //     func: function() {
+        //         // console.log(this.top);
+        //         return this.prop;
+        //     },
+        // };
+
+        // console.log(test.func());
+        // // expected output: 42
+
+
+            // var obj = {
+            //     x: 81,
+            //     getX: function() {
+            //         return this.x;
+            //     }
+            // };
+
+            // alert(obj.getX.bind(obj)());
+            // alert(obj.getX.call(obj));
+            // alert(obj.getX.apply(obj));
+
+            // // Apply() Method -> The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).
+            // console.log("Apply() Method");
+
+            // const numbers = [5, 6, 2, 3, 7];
+
+            // const max = Math.max.apply(this,numbers);
+            // // const max = Math.max.apply(null, numbers);
+
+            // console.log(max);
+            // // expected output: 7
+
+            // const min = Math.min.apply(this,numbers);
+            // // const min = Math.min.apply(null, numbers);
+
+            // console.log(min);
+            // // expected output: 2
+
+
+            // // Function.prototype.bind() -> The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+            // console.log("Bind() Method");
+
+            // const module = {
+            //     x : 42,
+            //     getX : function() {
+            //         return this.x;
+            //     }
+            // };
+
+            // const unboundGetX = module.getX;
+            // console.log(unboundGetX()); // The function gets invoked at the global scope
+            // // expected output: undefined
+
+            // const boundGetX = unboundGetX.bind(module);
+            // console.log(boundGetX());
+            // // expected output: 42
+
+
+            // // Function.prototype.call() - > The call() method calls a function with a given this value and arguments provided individually.
+            
+            // console.log("Call() method");
+            // function Product(name, price) {
+            //     this.name = name;
+            //     this.price = price;
+            // }
+
+            // function Food(name, price) {
+            //     Product.call(this, name, price);
+            //     this.category = 'food';
+            // }
+
+            // console.log(new Food('cheese', 5).name);
+            // // expected output: "cheese"
+
+
+            // // Function.prototype.toString() - >  The toString() method returns a string representing the source code of the function.
+            // function sum(a, b) {
+            //     return a + b;
+            // }
+
+            // console.log(sum.toString());
+            // // expected output: "function sum(a, b) {
+            // //                     return a + b;
+            // //                   }"
+
+            // console.log(Math.abs.toString());
+            // // expected output: "function abs() { [native code] }"
+
+            // Call()
+            // let name = {
+            //     firstName : "Satyawan",
+            //     lastName : "Auti",
+            //     // fullName : function () {
+            //     //     console.log(this.firstName +" "+this.lastName);
+            //     // }
+            // }
+
+            let name = {
+                firstName : "Satyawan",
+                lastName : "Auti",
+               
+            };
+
+            let fullName = function (hometown,state) {
+                // console.log(this.firstName + " " + this.lastName );    
+                console.log(this.firstName + " " + this.lastName + " from " + hometown + " , " + state);
+            };
+
+            // name.fullName();
+            // fullName.call(name);
+            // fullName.call(name, "Rajuri","MH");
+            fullName.call(name, "Rajuri", "MH");
+
+            let name2 = {
+                firstName : "Priyanka",
+                lastName : "Auti"
+            };
+
+            // function borrowing
+            console.log("function borrowing");
+            // name.fullName.call(name2); ->all_in_one_js.html:886 Uncaught TypeError: Cannot read properties of undefined (reading 'call')
+            // fullName.call(name2, "Rajuri", "MH");
+            
+            fullName.call(name2, "Bota", "MH");
+            // in call() we pass agruments individually 
+
+            fullName.apply(name2, ["Bota", "MH"]);
+            // in apply() method we pass agruments in array list
+
+            // bind() -> invoke function / keep a copy of that method & use it later
+            let printName = fullName.bind(name2,"Bota", "MH");
+            console.log(printName);
+            printName();
+
+            // // Default Parameter
+            // console.log("Function Default parameter");
+            // var ab;
+            // function sum(a,b) {
+            //     return (a+b);
+            //     var ab =10;
+            // }
+            // console.log(ab);
+            // console.log(sum(3,7));
 
     </script>
 </head>
