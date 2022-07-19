@@ -38,9 +38,10 @@
             };
 
             // let fullName = function (hometown,state) {
-            let fullName = function () {
-                console.log(this.firstName + " " + this.lastName ); 
-                // console.log(this.firstName + " " + this.lastName+" from "+city );    
+            let fullName = function (city) {
+                // console.log(name.firstName + " " + this.lastName ); 
+                // console.log(this.firstName + " " + this.lastName ); 
+                console.log(this.firstName + " " + this.lastName+" from "+city );    
                 // console.log(this.firstName + " " + this.lastName + " from " + hometown + " , " + state);
             };
 
@@ -54,12 +55,13 @@
             // With call() , an object can use a method belonging to another object.
 
             console.log("call() method ");
-            fullName.call(name);
-            // fullName.call(name, "Pune");
+            // fullName.call(name);
+            fullName.call(name, "Pune");
             // fullName.call(name, "Pune", "MH");
             // in call() we pass agruments individually 
 
 
+            // Apply() method --->
             // With apply , you can write a method once, and then inherit it in another object,
             //  without having to rewrite the method for the new object. apply is very similar to call() , 
             //  except for the type of arguments it supports. 
@@ -80,8 +82,8 @@
             console.log("bind() method ");
             // bind() -> invoke function / keep a copy of that method & use it later
         
-            let printName = fullName.bind(name);
-            // let printName = fullName.bind(name,"Pune");
+            // let printName = fullName.bind(name);
+            let printName = fullName.bind(name,"Pune");
             // let printName = fullName.bind(name,"Pune", "MH");
             console.log(printName);
             printName();
