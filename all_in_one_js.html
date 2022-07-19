@@ -1,945 +1,1063 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webpage JS Program</title>
     <script>
-        let arr = [
-                    {
-                        id : 1,
-                        name : "Satyawan",
-                        address : "Pune",
-                        company : "Geospoc",
-                        Language :  [ 'English', 'Marathi', 'Hindi', 'Gujarati'],
-                        Experience : 3.5,
-                        Status : "Working"
-                    },
-                    {
-                        id : 2,
-                        name : "Priyanka",
-                        address : "Bota",
-                        company : "Amsa Infotech",
-                        Language :  [ 'English', 'Marathi', 'Hindi' ],
-                        Experience : 2.5,
-                        Status : "Working"
-                    },
-                    {
-                        id : 3,
-                        name : "Aniket",
-                        address : "Khodad",
-                        company : "Geospoc",
-                        Language :  [ 'English', 'Marathi', 'Hindi' ],
-                        Experience : 5.0,
-                        Status : "Working"
-                    },
-                    {
-                        id : 4,
-                        name : "Prasad",
-                        address : "Rajuri",
-                        company : "Wipro",
-                        Language :  [ 'English', 'Marathi', 'Hindi' ],
-                        Experience : 3.5,
-                        Status : "Working"
-                    },
-                    {
-                        id : 5,
-                        name : "Rachana",
-                        address : "Karad",
-                        company : "Wipro",
-                        Language :  [ 'English', 'Marathi', 'Hindi', 'Telgu'],
-                        Experience : 3.5,
-                        Status : "Bench"
-                    },
-                    {
-                        id : 6,
-                        name : "Nikhil",
-                        address : "Bhor",
-                        company : "Wipro",
-                        Language :  [ 'English', 'Marathi', 'Hindi'],
-                        Experience : 3.5,
-                        Status : "Serving Notice Period"
-                    },
-        ];
+      let arr = [
+        {
+          id: 1,
+          name: "Satyawan",
+          address: "Pune",
+          company: "Geospoc",
+          Language: ["English", "Marathi", "Hindi", "Gujarati"],
+          Experience: 3.5,
+          Status: "Working",
+        },
+        {
+          id: 2,
+          name: "Priyanka",
+          address: "Bota",
+          company: "Amsa Infotech",
+          Language: ["English", "Marathi", "Hindi"],
+          Experience: 2.5,
+          Status: "Working",
+        },
+        {
+          id: 3,
+          name: "Aniket",
+          address: "Khodad",
+          company: "Geospoc",
+          Language: ["English", "Marathi", "Hindi"],
+          Experience: 5.0,
+          Status: "Working",
+        },
+        {
+          id: 4,
+          name: "Prasad",
+          address: "Rajuri",
+          company: "Wipro",
+          Language: ["English", "Marathi", "Hindi"],
+          Experience: 3.5,
+          Status: "Working",
+        },
+        {
+          id: 5,
+          name: "Rachana",
+          address: "Karad",
+          company: "Wipro",
+          Language: ["English", "Marathi", "Hindi", "Telgu"],
+          Experience: 3.5,
+          Status: "Bench",
+        },
+        {
+          id: 6,
+          name: "Nikhil",
+          address: "Bhor",
+          company: "Wipro",
+          Language: ["English", "Marathi", "Hindi"],
+          Experience: 3.5,
+          Status: "Serving Notice Period",
+        },
+      ];
 
-        console.log(arr);
+      console.log(arr);
 
-        // // Print all the data of employees with languange marathi
-        // arr.filter(lang => {
-        //     lang.Language.filter(m => {
-        //         if(m == "Marathi")
-        //         {
-        //             console.log(lang);
-        //         }
-        //     });
-        // });
+      // Print all the data of employees with languange marathi
+      arr.filter((lang) => {
+        lang.Language.filter((m) => {
+          if (m == "Telgu") {
+            console.log(lang);
+          }
+        });
+      });
 
-        // console.log("Wipro Employees");
+      // console.log("Wipro Employees");
 
-        // for (let i = 0; i < arr.length; i++) {
-        //     if(arr[i].company == "Wipro"){
-        //         console.log(arr[i]);
-        //     }
-            
+      // for (let i = 0; i < arr.length; i++) {
+      //     if(arr[i].company == "Wipro"){
+      //         console.log(arr[i]);
+      //     }
+
+      // }
+      // console.log("array method -> Wipro Employees");
+      // let x = arr.filter(e => {
+      //     if(e.company == "Wipro") {
+      //         console.log(e);
+      //     }
+      // });
+
+      // console.log("GeoSpoc Employees");
+      // for (let i = 0; i < arr.length; i++) {
+      //     if(arr[i].company == "Geospoc"){
+      //         console.log(arr[i]);
+      //     }
+
+      // }
+      // console.log("array method -> Geospoc Employees");
+      // let y = arr.filter(e => {
+      //     if(e.company == "Geospoc") {
+      //         console.log(e);
+      //     }
+      // });
+
+      // console.log("Language Known");
+      // console.log(arr[2].Language[1]);
+
+      // for (let i = 0; i < arr.length; i++) {
+      //     for (let j = 0; j < arr[i].Language.length; j++) {
+
+      //         if(arr[i].Language[j] == "Telgu"){
+      //             console.log(arr[i]);
+      //         }
+
+      //     }
+
+      // }
+
+      // console.log("array method -> Language Known");
+      // let z = arr.filter(lang => {
+
+      //     let abc1 = lang.Language;
+      //     abc1.filter(l => {
+      //         if (l == "Telgu") {
+      //             console.log(lang);
+      //         }
+      //     });
+
+      // });
+
+      // Mapping employee with company name
+      let geo = arr.map((co) => {
+        if (co.company) {
+          return co.company;
+          // return "Geospoc ";
+          // console.log(co);
+        }
+        // if (co.company == "Wipro") {
+        //     return "Wipro ";
+        //     // console.log(co);
         // }
-        // console.log("array method -> Wipro Employees");
-        // let x = arr.filter(e => {
-        //     if(e.company == "Wipro") {
-        //         console.log(e);
-        //     }
-        // });
-
-        // console.log("GeoSpoc Employees");
-        // for (let i = 0; i < arr.length; i++) {
-        //     if(arr[i].company == "Geospoc"){
-        //         console.log(arr[i]);
-        //     }
-            
+        // else{
+        //     return "Outside Geospoc ";
         // }
-        // console.log("array method -> Geospoc Employees");
-        // let y = arr.filter(e => {
-        //     if(e.company == "Geospoc") {
-        //         console.log(e);
-        //     }
-        // });
-
-        // console.log("Language Known");
-        // console.log(arr[2].Language[1]);
-
-        // for (let i = 0; i < arr.length; i++) {
-        //     for (let j = 0; j < arr[i].Language.length; j++) {
-            
-        //         if(arr[i].Language[j] == "Telgu"){
-        //             console.log(arr[i]);
-        //         }
-                
-        //     }
-            
-        // }
-
-        // console.log("array method -> Language Known");
-        // let z = arr.filter(lang => {
-        
-        //     let abc1 = lang.Language;
-        //     abc1.filter(l => {
-        //         if (l == "Telgu") {
-        //             console.log(lang);
-        //         }
-        //     });
-           
-        // });
-
-    //          // Mapping employee with company name
-    //    let geo =  arr.map(co => {
-    //         if (co.company) {
-    //             return co.company;
-    //             // return "Geospoc ";
-    //             // console.log(co);
-    //         } 
-    //         // if (co.company == "Wipro") {
-    //         //     return "Wipro ";
-    //         //     // console.log(co);
-    //         // } 
-    //         // else{
-    //         //     return "Outside Geospoc ";
-    //         // }
-    //     });
-    //       console.log(geo);
-
-        // let inc = arr.includes(arr.company == "Geospoc");
-        // console.log(inc);   
-
-        // // Filter with Name Satyawan
-        // arr.filter(inc1 => {
-        //     if (inc1.name == "Satyawan") {
-        //         // console.log(inc1);
-        //         console.log("Satya is present");
-        //     }
-        // });
-
-
-        // arr.find(inc1 => {
-        //     if (inc1.company == "Wipro") {
-        //         // console.log(inc1);
-        //         // return "Satya is Present";
-        //         console.log("Employees from Wipro is present");
-        //     }
-        // });
-
-        // // Listing Employees from Wipro
-        // arr.forEach(inc1 => {
-        //     if (inc1.company == "Wipro") {
-        //         // console.log(inc1);
-        //         // return "Satya is Present";
-        //         console.log("Employees from Wipro is present");
-        //         console.log(inc1);
-        //     }
-        // });
-
-        // // mapping Working status of Employee
-        // let ben = arr.map(inc1 => {
-        //     if (inc1.Status == 2) {
-        //         // console.log(inc1);
-        //         return "bench";
-        //         console.log("Employee with ID -> 2 is present");
-        //         console.log(inc1);
-        //     }
-        //     else{
-        //         return "working";
-        //     }
-        // });
-        // console.log(ben);
-
-        // let ben = arr.map(inc1 => {
-        //     if (inc1.Status) {
-        //         // console.log(inc1);
-        //         return inc1.Status;
-        //         // console.log("Employee with ID -> 2 is present");
-        //         // console.log(inc1);
-        //     }
-        //     // else{
-        //     //     return "working";
-        //     // }
-        // });
-        // console.log(ben);
-
-        // // Mapping employee with greater 3 years of experience.
-        // let experience = arr.map(exp => {
-        //     if (exp.Experience >= 3) {
-        //         return "greater than 3";
-        //     }else{
-        //         return "less than 3";
-        //     }
-        // });
-        // console.log(experience);
-
-        // // Array reduce function to return the single value accumulated from array
-        // let arr4 = [70, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        // console.log(arr4.reduce(add1));
-
-        // function add1(total , num) {
-        //     // return total + num ;
-        //     return total - num ;
-            
-        // }
-        
-        // let arr10 = ['a', 'b', 'c', 'd'];
-        // let arr5 = [70, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        // console.log(arr5);
-        // // Array pop method removes last element of array
-        // console.log("Array POP "+arr5.pop());
-        // console.log(arr5);
-        
-        // // Array push method added new element to array at  end of array
-        // console.log("Array Push "+arr5.push(11,12,13));
-        // console.log(arr5);
-        
-        // // The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
-        // let arr6 = [70, 1, 2, 3, 4, [5, 6], 7, 8,[[[14,15]]], [ 9, 10]];
-        // let flat1 = arr6.flat(2);
-        // let flat2 = arr6.flat(3);
-        // console.log("Array Flat() Method "+arr6.flat());
-        // console.log("Array flat()");
-        // console.log(flat1);
-        // console.log(flat2);
-
-        // // Concatenate the 2 array into 1
-        // console.log(arr5.concat(" + "+arr10));
-
-        // Find index of specific array element
-        // // The findIndex() method returns the index of the first element in an array that satisfies the provided testing function.
-        // let arr7 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        // function checkNum(num) {
-        //     return num >= 9;
-        // }
-        // console.log(" Index of 9 is "+arr7.findIndex(checkNum));
-
-        // // The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
-        // const fruits = ["Banana", "Orange", "Apple", "Mango"];
-        // // copy 1st 2  to next position(2,0)
-        // console.log(fruits.copyWithin(2,0));
-
-        // const fruits1 = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya"];
-        // // copy first 2 to 3rd & 4th Position(2,0,2)
-        // console.log( fruits1.copyWithin(1,0,2));
-
-        // // The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
-        // console.log("Array entries() method");
-        // let arr11 = ['a', 'b', 'c', 'd'];
-        // let iterate = arr11.entries();
-        // console.log(iterate.next().value);
-        // console.log(iterate.next().value);
-        // console.log(iterate.next().value);
-        // console.log(iterate.next().value);
-
-        // // The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
-        // console.log("Array.every() method");
-        // let array1 = [5, 30, 39, 29, 10, 13];
-
-        // console.log(array1.every(find1));
-
-        // function find1(num1) {
-        //     return num1 > 3;   
-        // }
-
-        // // The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array.
-        // console.log("array.fill() method");
-        // const array1 = [1, 2, 3, 4];
-
-        // // fill with 0 from position 2 until position 4
-        // console.log(array1.fill(0, 2, 4));
-        // // expected output: [1, 2, 0, 0]
-
-        // // fill with 5 from position 1
-        // console.log(array1.fill(5, 1));
-        // // expected output: [1, 5, 5, 5]
-
-        // console.log(array1.fill(6));
-        // // expected output: [6, 6, 6, 6]
-
-        // // The findLast() method returns the value of the last element in an array that satisfies the provided testing function. If no elements satisfy the testing function, undefined is returned.
-        // console.log("array.findLast() Method ");
-        // const array1 = [5, 12, 50, 130, 44];
-
-        // function found1(ele) {
-        //     return ele > 45;
-        // }
-        // console.log(array1.findlast(found1));
-        // // const found = array1.findLast((element) => element > 45);
-
-        // // console.log(found);
-        // // expected output: 130 -> Error: array1.findLast is not a function
-
-        // Rest Operator
-        // let arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        // let [ cb , xt, ...ab] = arr1;
-        // console.log("Cb is "+cb);
-        // console.log("XT is " +xt);
-        // console.log("rest operator "+ab);
-
-        // // Sort the array in ascending manner
-        // let arr8 = ['A', 'B', 'C', 'F', 'D', 'E', 'A', 'C', 'D', 9, 3, 5, 3, ];
-        // console.log("Array.sort() method");
-        // console.log(arr8.sort());
-
-        // // The keys() method returns a new Array Iterator object that contains the keys for each index in the array.
-        // const array1 = ['a', 'b', 'c', 'd'];
-        // const iterator = array1.keys();
-
-        // for (const key of iterator) {
-        //     console.log(key);
-        // }
-
-        // expected output: 0
-        // expected output: 1
-        // expected output: 2
-
-        // // Reverse the array
-        // const array2 = ['a', 'b', 'c', 'd', 2, 3, 1];
-        // console.log(array2);
-        // const reversed = array2.reverse();
-        // console.log('reversed:', reversed);
-
-        // // The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
-        // const array1 = [1, 2, 3, 4, 5];
-
-        // const firstElement = array1.shift();
-        // console.log(array1);
-        // // expected output: Array [2, 3, 4, 5]
-
-        // console.log(firstElement);
-        // // expected output: 1
-
-        // // The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
-        // console.log("Array.slice() Method ");
-        // const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
-
-        // console.log(animals.slice(2));
-        // // expected output: Array ["camel", "duck", "elephant"]
-
-        // console.log(animals.slice(2, 4));
-        // // expected output: Array ["camel", "duck"]
-
-        // console.log(animals.slice(1, 5));
-        // // expected output: Array ["bison", "camel", "duck", "elephant"]
-
-        // console.log(animals.slice(-2));
-        // // expected output: Array ["duck", "elephant"]
-
-        // console.log(animals.slice(2, -1));
-        // // expected output: Array ["camel", "duck"]
-
-        // console.log(animals.slice());
-        // // expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
-
-        // // The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
-        // console.log("array.some() Method");
-        // const array = [1, 2, 3, 4, 5];
-
-        // // checks whether an element is even
-        // const even = (element) => element % 2 === 0;
-
-        // console.log(array.some(even));
-        // // expected output: true
-
-        // // The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. To access part of an array without modifying it, see slice().
-        // console.log("array.splice() Method");
-
-        // const months = ['Jan', 'March', 'April', 'June'];
-        // console.log(months);
-        // months.splice(1, 0, 'Feb');
-        // // inserts at index 1
-        // console.log(months);
-        // // expected output: Array ["Jan", "Feb", "March", "April", "June"]
-
-        // months.splice(4, 1, 'May');
-        // // replaces 1 element at index 4
-        // console.log(months);
-        // // expected output: Array ["Jan", "Feb", "March", "April", "May"]
-
-        // // The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
-        // console.log("array.unshift() method");
-        // const array1 = [1, 2, 3];
-        // console.log(array1);
-        // console.log(array1.unshift(4, 5));
-        // // expected output: 5
-
-        // console.log(array1);
-        // // expected output: Array [4, 5, 1, 2, 3]
-
-        // // The toString() method returns a string representing the specified array and its elements.
-        // console.log("array.toString() Method");
-        
-        // const array1 = [1, 2, 'a', '1a'];
-        // console.log(array1);
-
-        // let abc3 = console.log(array1.toString());
-        // // expected output: "1,2,a,1a"
-
-
-
-   
-
-        // // Array.includes() method
-        // let arr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        //     if (arr2.includes(10)) {
-        //         console.log("Number present in array");
-        //     }
-        //     else{
-        //         console.log("Entered Number is Missing");
-        //     }
-        
-        // // Set() removes Duplicate values
-        // let arr3 = ['A', 'B', 'C', 'F', 'D', 'E', 'A', 'C', 'D', 9, 3, 5, 3, ];
-        // let unique = new Set(arr3);
-        // console.log(unique);
-
-        // // String Methods
-        // let str = "Welcome to Geospoc";
-        // let str1 = "Color is Blue";
-        // let str2 = "VS Code";
-
-        // let checkLenght = str.length;
-        // console.log(checkLenght);
-        // // string.length to find the Length of String
-        // console.log("str length is "+str.length +", str1 length is "+str1.length+", str2 length is "+str2.length);
-
-        // // str.charAt() shows the string character at that position
-        // console.log(str.charAt(0));
-
-        // // str.concat to concat the 2 strings
-        // let conc = str.concat(" + "+str2);
-        // console.log(conc);
-
-        // // str.charCode() shows the character code of that character
-        // console.log(str.charCodeAt(14));
-
-        // // string.includes check that some part odf string is avaialable or included in the string or not.
-        // console.log(str1.includes("is"));
-
-        // // Join the array elements
-        // const elements = ['Fire', 'Air', 'Water'];
-
-        // console.log(elements.join());
-        // // expected output: "Fire,Air,Water"
-
-        // console.log(elements.join(''));
-        // // expected output: "FireAirWater"
-
-        // console.log(elements.join('-'));
-        // // expected output: "Fire-Air-Water"
-
-
-        // // to check string ends with specific character
-        // if (str2.endsWith("Code")) {
-        //     console.log( "True");
-        // }else{
-        //     console.log( "False");
-        // }
-
-        // // to check string start with specific character
-        // if (str.startsWith("Wel")) {
-        //     console.log( "str is start with Wel");
-        // }else{
-        //     console.log( "False");
-        // }
-
-        // // how concatenate working with numbers & string
-        // let checkConcat = 1 + 3 + 5 + 4 + 2 + 'ABC' + 2 + 1 + 4 + 'XYZ';
-        // console.log(checkConcat);
-
-        // let checkConcat1 = 'QWERTY'+ 1 + 3 + 5 + 4 + 2 + 'ABC' + 2 + 1 + 4 + 'XYZ';
-        // console.log(checkConcat1);
-
-        // let checkConcat2 = 'QWERTY'+ 1 + 3 + ( 5 + 4 + 2 ) + 'ABC' + 2 + ( 1 + 4 ) + 'XYZ';
-        // console.log(checkConcat2);
-
-        // console.log(a);
-        // const a = 90;
-        // // var a = 90;
-        // // let a = 90;
-        // console.log(a);
-
-        // // IIFE -> Immediately Invoked Function Expression 
-        // console.log("IIFE Function-> Traditional Function");
-
-        // (function (a,b){
-        //     let c = a + b;
-        //     console.log(c);
-        // })(4,5);
-
-        // console.log("IIFE Function-> Arrow Function");
-
-        // ((a,b) => {
-        // /* … */
-        //     let c = a + b;
-        //     console.log(c);
-        // })(3,4);
-
-
-        // // The switch statement evaluates an expression, matching the expression's value to a case clause, and executes statements associated with that case, as well as statements in cases that follow the matching case.
-        // const expr = 'Oranges';
-        // switch (expr) {
-        //                 case 'Oranges':
-        //                     console.log('Oranges are $0.59 a pound.');
-        //                     break;
-        //                 case 'Mangoes':
-        //                 case 'Papayas':
-        //                     console.log('Mangoes and papayas are $2.79 a pound.');
-        //                     // expected output: "Mangoes and papayas are $2.79 a pound."
-        //                     break;
-        //                 default:
-        //                     console.log(`Sorry, we are out of ${expr}.`);
-        // }
-
-
-            // // let Variable
-            // for (let i = 0; i < 5; i++) {
-            //     console.log(i);
-            // }
-            // console.log(i);
-
-            // // var Variable
-            // for (var j = 0; j < 5; j++) {
-            //     console.log(j);
-            // }
-            // console.log(j);
-
-            // Const Variable
-            // for (const a = 0; a < 5; a++) {
-            //     console.log(a);
-            // }
-            // console.log(a);
-
-            // Array & Object Destructuring 
-            // let array3 = ['A', 'B', 'C', 'D', 'F', 'E', 'G'];
-            // let object1 = {name : 'Satya', address : "Rajuri", company : "Geospoc", position : "SDE1"};
-
-            // let [a,b,c,d,...r] = array3;
-            // console.log("a is "+a+ ", b is "+b+", c is "+c+", d is "+d+", rest is "+r);
-
-            // let {name, address, company, position} = object1;
-            // console.log("name is "+name+ ", address is "+address+", company is "+company+", position is "+position+" , ");
-
-            // Objects
-            // // object.keys() method -> shows the keys properties of object 
-            // console.log("object.keys() method")
-            // const object1 = {
-            //                     a: 'somestring',
-            //                     b: 42,
-            //                     c: false
-            // };
-
-            // console.log(Object.keys(object1));
-            // // expected output: Array ["a", "b", "c"]
-
-            // // Object.freeze() method -> The Object.freeze() method freezes an object. A frozen object can no longer be changed; freezing an object prevents new properties from being added to it,
-            // console.log(" Object.freeze() method")
-            // const obj = {
-            //                 prop: 42
-            // };
-
-            // Object.freeze(obj);
-
-            // obj.prop = 33;
-            // obj.name = "satya";
-            //   // // Throws an error in strict mode
-            // console.log(obj.prop);
-            // console.log(obj.name);
-            // // // expected output: 42
-
-            // const arr10 = [1,2,3,35,34];
-            
-            // Object.freeze(arr10);
-            // // arr10.push(123);
-            // console.log(arr10);
-            // console.log(arr10[5]);
-          
-
-            
-
-            // // The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object.
-            // console.log(" The Object.assign() method ");
-            // // const target = { a: 1, b: 2 };
-            // // const source = { b: 4, c: 5 };
-
-            // const target = { a: 1, b: 2, c: 3 };
-            // const source = { b: 4, c: 5, e: 7 };
-
-            // const returnedTarget = Object.assign(target, source);
-
-            // console.log(target);
-            // // expected output: Object { a: 1, b: 4, c: 5 }
-
-            // console.log(returnedTarget);
-            // // expected output: Object { a: 1, b: 4, c: 5 }
-
-            // // The Object.create() method creates a new object, using an existing object as the prototype of the newly created o
-            // console.log("The Object.create() method");
-            // const person = {
-            //                     isHuman: false,
-            //                     printIntroduction: function() {
-            //                         console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
-            //                         console.log("My name is "+this.name+". Am I human? "+this.isHuman);
-            //                     }
-            // };
-
-            // const me = Object.create(person);
-
-            // me.name = 'Satya'; // "name" is a property set on "me", but not on "person"
-            // me.isHuman = true; // inherited properties can be overwritten
-
-            // me.printIntroduction();
-            // // expected output: "My name is Satya. Am I human? true"
-
-            // // Object.prototype.toString() -> The toString() method returns a string representing the objec
-            // console.log("Object.prototype.toString() -> The toString() method");
-            // function Dog(name) {
-            //          this.name = name;
-            // }
-
-            // const dog1 = new Dog('Tommy');
-
-            // // Dog.toString = function dogToString() {
-            // // return `${this.name}`;
-            // // return +this.name;
-            // // };
-
-            // Dog.prototype.toString = function dogToString() {
-            // return `${this.name}`;
-            // // return +this.name;
-            // //  console.log(this.name);
-            // };
-
-            // console.log(dog1.toString());
-            // // expected output: "Tommy"
-
-            // // Object.prototype.constructor - > The constructor property returns a reference to the Object constructor function that created the instance object. Note that the value of this property is a reference to the function itself, not a string containing the function's name.
-            // let o = {}
-            // // o.constructor === Object // true
-            // if (o.constructor === Object) {
-            //     console.log("true"); 
-            // }
-
-            // let o1 = new Object
-            // o1.constructor === Object // true
-
-            // let a = []
-            // a.constructor === Array // true
-
-            // let a1 = new Array
-            // a1.constructor === Array // true
-
-            // let n = new Number(3)
-            // n.constructor === Number // true
-
-
-            
-        // classes
-        // unnamed
-        // let Rectangle = class {
-        //                         constructor(height, width) {
-        //                                                         this.height = height;
-        //                                                         this.width = width;
-        //                         }
-        // };
-        // console.log(Rectangle.name);
-        // // output: "Rectangle"
-
-        // // named
-        // Rectangle = class Rectangle2 {
-        //                                 constructor(height, width) {
-        //                                                                 this.height = height;
-        //                                                                 this.width = width;
-        //                                 }
-        // };
-        // console.log(Rectangle.name);
-        // // output: "Rectangle2"
-
-
-        // let arr9 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-        // // console.log(delete arr9[2]);
-        // console.log(arr9);
-        // // arr9.splice(2,2,15,16);
-        // arr9.splice(2,1);
-        // console.log(arr9);
-
-        // function resolveAfter2Seconds() {
-        //     return new Promise(resolve => {
-        //         setTimeout(() => {
-        //         resolve('resolved');
-        //         }, 2000);
-        //     });
-        // }
-
-        //     async function asyncCall() {
-        //     console.log('calling');
-        //     const result = await resolveAfter2Seconds();
-        //     console.log(result);
-        //     // expected output: "resolved"
-        // }
-
-        // asyncCall();
-
-        // let count = true;
-        // new Promise 
-
-        // const myPromise = new Promise((resolve, reject) => {
-        //         setTimeout(() => {
-        //             resolve('foo');
-        //         }, 3000);
-        // });
-        
-        //     let demo = true;
-        // let myPromise = new Promise(function(myResolve, myReject) {
-        // // "Producing Code" (May take some time)
-
-        //     setTimeout(() => {
-        //         if(demo) {
-
-                    
-        //         }
-        //                 // resolve('foo');
-        //                 // myResolve();
-        //             }, 3000);
-            
-        // myResolve(); // when successful
-        // myReject();  // when error
-        // });
-
-        // // "Consuming Code" (Must wait for a fulfilled Promise)
-        // myPromise.then(
-        // function(value) { /* code if successful */
-        //     console.log(" It is true.");
-        // },
-        // function(error) { /* code if some error */ 
-        //     console.log("It is false ");
-        // }
-        // );
-
-        // // Callback Functions
-        // function greeting(name) {
-        //     alert('Hello ' + name);
-        // }
-
-        // function processUserInput(callback) {
-        //     var name = prompt('Please enter your name.');
-        //     // callback(name);
-        //     greeting(name);
-        // }
-
-        // processUserInput(greeting);
-
-            // var a =10;
-            // var a= 12;
-            // let b = 12;
-            // let b =125;
-            // console.log("scope"+a,b);
-
-
-        // function init() {
-        //     var name = 'Mozilla'; // name is a local variable created by init
-        //         function displayName() {
-        //             // displayName() is the inner function, a closure
-        //             console.log(name); // use variable declared in the parent function
-        //         }
-        //     displayName();
-        // }
-        // init();
-
-        // // this Keyword 
-        // const test = {
-        //     prop: 42,
-        //     // top: 11,
-        //     func: function() {
-        //         // console.log(this.top);
-        //         return this.prop;
-        //     },
-        // };
-
-        // console.log(test.func());
-        // // expected output: 42
-
-
-            // var obj = {
-            //     x: 81,
-            //     getX: function() {
-            //         return this.x;
-            //     }
-            // };
-
-            // alert(obj.getX.bind(obj)());
-            // alert(obj.getX.call(obj));
-            // alert(obj.getX.apply(obj));
-
-            // // Apply() Method -> The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).
-            // console.log("Apply() Method");
-
-            // const numbers = [5, 6, 2, 3, 7];
-
-            // const max = Math.max.apply(this,numbers);
-            // // const max = Math.max.apply(null, numbers);
-
-            // console.log(max);
-            // // expected output: 7
-
-            // const min = Math.min.apply(this,numbers);
-            // // const min = Math.min.apply(null, numbers);
-
-            // console.log(min);
-            // // expected output: 2
-
-
-            // // Function.prototype.bind() -> The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
-
-            // console.log("Bind() Method");
-
-            // const module = {
-            //     x : 42,
-            //     getX : function() {
-            //         return this.x;
-            //     }
-            // };
-
-            // const unboundGetX = module.getX;
-            // console.log(unboundGetX()); // The function gets invoked at the global scope
-            // // expected output: undefined
-
-            // const boundGetX = unboundGetX.bind(module);
-            // console.log(boundGetX());
-            // // expected output: 42
-
-
-            // // Function.prototype.call() - > The call() method calls a function with a given this value and arguments provided individually.
-            
-            // console.log("Call() method");
-            // function Product(name, price) {
-            //     this.name = name;
-            //     this.price = price;
-            // }
-
-            // function Food(name, price) {
-            //     Product.call(this, name, price);
-            //     this.category = 'food';
-            // }
-
-            // console.log(new Food('cheese', 5).name);
-            // // expected output: "cheese"
-
-
-            // // Function.prototype.toString() - >  The toString() method returns a string representing the source code of the function.
-            // function sum(a, b) {
-            //     return a + b;
-            // }
-
-            // console.log(sum.toString());
-            // // expected output: "function sum(a, b) {
-            // //                     return a + b;
-            // //                   }"
-
-            // console.log(Math.abs.toString());
-            // // expected output: "function abs() { [native code] }"
-
-            // Call()
-            // let name = {
-            //     firstName : "Satyawan",
-            //     lastName : "Auti",
-            //     // fullName : function () {
-            //     //     console.log(this.firstName +" "+this.lastName);
-            //     // }
-            // }
-
-            let name = {
-                firstName : "Satyawan",
-                lastName : "Auti",
-               
-            };
-
-            let fullName = function (hometown,state) {
-                // console.log(this.firstName + " " + this.lastName );    
-                console.log(this.firstName + " " + this.lastName + " from " + hometown + " , " + state);
-            };
-
-            // name.fullName();
-            // fullName.call(name);
-            // fullName.call(name, "Rajuri","MH");
-            fullName.call(name, "Rajuri", "MH");
-
-            let name2 = {
-                firstName : "Priyanka",
-                lastName : "Auti"
-            };
-
-            // function borrowing
-            console.log("function borrowing");
-            // name.fullName.call(name2); ->all_in_one_js.html:886 Uncaught TypeError: Cannot read properties of undefined (reading 'call')
-            // fullName.call(name2, "Rajuri", "MH");
-            
-            fullName.call(name2, "Bota", "MH");
-            // in call() we pass agruments individually 
-
-            fullName.apply(name2, ["Bota", "MH"]);
-            // in apply() method we pass agruments in array list
-
-            // bind() -> invoke function / keep a copy of that method & use it later
-            let printName = fullName.bind(name2,"Bota", "MH");
-            console.log(printName);
-            printName();
-
-            // // Default Parameter
-            // console.log("Function Default parameter");
-            // var ab;
-            // function sum(a,b) {
-            //     return (a+b);
-            //     var ab =10;
-            // }
-            // console.log(ab);
-            // console.log(sum(3,7));
+      });
+      console.log(geo);
+
+      // let inc = arr.includes(arr.company == "Geospoc");
+      // console.log(inc);
+
+      // // Filter with Name Satyawan
+      // arr.filter(inc1 => {
+      //     if (inc1.name == "Satyawan") {
+      //         // console.log(inc1);
+      //         console.log("Satya is present");
+      //     }
+      // });
+
+      // arr.find(inc1 => {
+      //     if (inc1.company == "Wipro") {
+      //         // console.log(inc1);
+      //         // return "Satya is Present";
+      //         console.log("Employees from Wipro is present");
+      //     }
+      // });
+
+      // // Listing Employees from Wipro
+      // arr.forEach(inc1 => {
+      //     if (inc1.company == "Wipro") {
+      //         // console.log(inc1);
+      //         // return "Satya is Present";
+      //         console.log("Employees from Wipro is present");
+      //         console.log(inc1);
+      //     }
+      // });
+
+      // // mapping Working status of Employee
+      // let ben = arr.map(inc1 => {
+      //     if (inc1.Status == 2) {
+      //         // console.log(inc1);
+      //         return "bench";
+      //         console.log("Employee with ID -> 2 is present");
+      //         console.log(inc1);
+      //     }
+      //     else{
+      //         return "working";
+      //     }
+      // });
+      // console.log(ben);
+
+      // let ben = arr.map(inc1 => {
+      //     if (inc1.Status) {
+      //         // console.log(inc1);
+      //         return inc1.Status;
+      //         // console.log("Employee with ID -> 2 is present");
+      //         // console.log(inc1);
+      //     }
+      //     // else{
+      //     //     return "working";
+      //     // }
+      // });
+      // console.log(ben);
+
+      // // Mapping employee with greater 3 years of experience.
+      // let experience = arr.map(exp => {
+      //     if (exp.Experience >= 3) {
+      //         return "greater than 3";
+      //     }else{
+      //         return "less than 3";
+      //     }
+      // });
+      // console.log(experience);
+
+      // // Array reduce function to return the single value accumulated from array
+      // let arr4 = [70, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // console.log(arr4.reduce(add1));
+
+      // function add1(total , num) {
+      //     // return total + num ;
+      //     return total - num ;
+
+      // }
+
+      // let arr10 = ['a', 'b', 'c', 'd'];
+      // let arr5 = [70, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // console.log(arr5);
+      // // Array pop method removes last element of array
+      // console.log("Array POP "+arr5.pop());
+      // console.log(arr5);
+
+      // // Array push method added new element to array at  end of array
+      // console.log("Array Push "+arr5.push(11,12,13));
+      // console.log(arr5);
+
+      // // The flat() method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+      // let arr6 = [70, 1, 2, 3, 4, [5, 6], 7, 8,[[[14,15]]], [ 9, 10]];
+      // let flat1 = arr6.flat(2);
+      // let flat2 = arr6.flat(3);
+      // console.log("Array Flat() Method "+arr6.flat());
+      // console.log("Array flat()");
+      // console.log(flat1);
+      // console.log(flat2);
+
+      // // Concatenate the 2 array into 1
+      // console.log(arr5.concat(" + "+arr10));
+
+      // Find index of specific array element
+      // // The findIndex() method returns the index of the first element in an array that satisfies the provided testing function.
+      // let arr7 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // function checkNum(num) {
+      //     return num >= 9;
+      // }
+      // console.log(" Index of 9 is "+arr7.findIndex(checkNum));
+
+      // // The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
+      // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      // // copy 1st 2  to next position(2,0)
+      // console.log(fruits.copyWithin(2,0));
+
+      // const fruits1 = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya"];
+      // // copy first 2 to 3rd & 4th Position(2,0,2)
+      // console.log( fruits1.copyWithin(1,0,2));
+
+      // // The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
+      // console.log("Array entries() method");
+      // let arr11 = ['a', 'b', 'c', 'd'];
+      // let iterate = arr11.entries();
+      // console.log(iterate.next().value);
+      // console.log(iterate.next().value);
+      // console.log(iterate.next().value);
+      // console.log(iterate.next().value);
+
+      // // The every() method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.
+      // console.log("Array.every() method");
+      // let array1 = [5, 30, 39, 29, 10, 13];
+
+      // console.log(array1.every(find1));
+
+      // function find1(num1) {
+      //     return num1 > 3;
+      // }
+
+      // // The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). It returns the modified array.
+      // console.log("array.fill() method");
+      // const array1 = [1, 2, 3, 4];
+
+      // // fill with 0 from position 2 until position 4
+      // console.log(array1.fill(0, 2, 4));
+      // // expected output: [1, 2, 0, 0]
+
+      // // fill with 5 from position 1
+      // console.log(array1.fill(5, 1));
+      // // expected output: [1, 5, 5, 5]
+
+      // console.log(array1.fill(6));
+      // // expected output: [6, 6, 6, 6]
+
+      // // The findLast() method returns the value of the last element in an array that satisfies the provided testing function. If no elements satisfy the testing function, undefined is returned.
+      // console.log("array.findLast() Method ");
+      // const array1 = [5, 12, 50, 130, 44];
+
+      // function found1(ele) {
+      //     return ele > 45;
+      // }
+      // console.log(array1.findlast(found1));
+      // // const found = array1.findLast((element) => element > 45);
+
+      // // console.log(found);
+      // // expected output: 130 -> Error: array1.findLast is not a function
+
+      // Rest Operator
+      // let arr1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // let [ cb , xt, ...ab] = arr1;
+      // console.log("Cb is "+cb);
+      // console.log("XT is " +xt);
+      // console.log("rest operator "+ab);
+
+      // // Sort the array in ascending manner
+      // let arr8 = ['A', 'B', 'C', 'F', 'D', 'E', 'A', 'C', 'D', 9, 3, 5, 3, ];
+      // console.log("Array.sort() method");
+      // console.log(arr8.sort());
+
+      // // The keys() method returns a new Array Iterator object that contains the keys for each index in the array.
+      // const array1 = ['a', 'b', 'c', 'd'];
+      // const iterator = array1.keys();
+
+      // for (const key of iterator) {
+      //     console.log(key);
+      // }
+
+      // expected output: 0
+      // expected output: 1
+      // expected output: 2
+
+      // // Reverse the array
+      // const array2 = ['a', 'b', 'c', 'd', 2, 3, 1];
+      // console.log(array2);
+      // const reversed = array2.reverse();
+      // console.log('reversed:', reversed);
+
+      // // The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+      // const array1 = [1, 2, 3, 4, 5];
+
+      // const firstElement = array1.shift();
+      // console.log(array1);
+      // // expected output: Array [2, 3, 4, 5]
+
+      // console.log(firstElement);
+      // // expected output: 1
+
+      // // The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included) where start and end represent the index of items in that array. The original array will not be modified.
+      // console.log("Array.slice() Method ");
+      // const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+      // console.log(animals.slice(2));
+      // // expected output: Array ["camel", "duck", "elephant"]
+
+      // console.log(animals.slice(2, 4));
+      // // expected output: Array ["camel", "duck"]
+
+      // console.log(animals.slice(1, 5));
+      // // expected output: Array ["bison", "camel", "duck", "elephant"]
+
+      // console.log(animals.slice(-2));
+      // // expected output: Array ["duck", "elephant"]
+
+      // console.log(animals.slice(2, -1));
+      // // expected output: Array ["camel", "duck"]
+
+      // console.log(animals.slice());
+      // // expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+
+      // // The some() method tests whether at least one element in the array passes the test implemented by the provided function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
+      // console.log("array.some() Method");
+      // const array = [1, 2, 3, 4, 5];
+
+      // // checks whether an element is even
+      // const even = (element) => element % 2 === 0;
+
+      // console.log(array.some(even));
+      // // expected output: true
+
+      // // The splice() method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. To access part of an array without modifying it, see slice().
+      // console.log("array.splice() Method");
+
+      // const months = ['Jan', 'March', 'April', 'June'];
+      // console.log(months);
+      // months.splice(1, 0, 'Feb');
+      // // inserts at index 1
+      // console.log(months);
+      // // expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+      // months.splice(4, 1, 'May');
+      // // replaces 1 element at index 4
+      // console.log(months);
+      // // expected output: Array ["Jan", "Feb", "March", "April", "May"]
+
+      // // The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array.
+      // console.log("array.unshift() method");
+      // const array1 = [1, 2, 3];
+      // console.log(array1);
+      // console.log(array1.unshift(4, 5));
+      // // expected output: 5
+
+      // console.log(array1);
+      // // expected output: Array [4, 5, 1, 2, 3]
+
+      // // The toString() method returns a string representing the specified array and its elements.
+      // console.log("array.toString() Method");
+
+      // const array1 = [1, 2, 'a', '1a'];
+      // console.log(array1);
+
+      // let abc3 = console.log(array1.toString());
+      // // expected output: "1,2,a,1a"
+
+      // // Array.includes() method
+      // let arr2 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      //     if (arr2.includes(10)) {
+      //         console.log("Number present in array");
+      //     }
+      //     else{
+      //         console.log("Entered Number is Missing");
+      //     }
+
+      // // Set() removes Duplicate values
+      // let arr3 = ['A', 'B', 'C', 'F', 'D', 'E', 'A', 'C', 'D', 9, 3, 5, 3, ];
+      // let unique = new Set(arr3);
+      // console.log(unique);
+
+      // // String Methods
+      //   let str = "Welcome to Geospoc";
+      //   let str1 = "Color is Blue";
+      //   let str2 = "VS Code";
+
+      //   let slice1 = str.slice(2, 4);
+      //   console.log(slice1);
+
+      //   let substr = str.substr(2, 4);
+      //   // substr (start , length-) length take next 4 elements
+      //   let substr1 = str.substring(2, 4);
+      //   // agruments substring (start from, end);
+
+      //   console.log("substr: " + substr);
+      //   console.log("substring: " + substr1);
+
+      //   let checkLenght = str.length;
+      //   console.log(checkLenght);
+      //   // string.length to find the Length of String
+      //   console.log(
+      //     "str length is " +
+      //       str.length +
+      //       ", str1 length is " +
+      //       str1.length +
+      //       ", str2 length is " +
+      //       str2.length
+      //   );
+
+      //   // str.charAt() shows the string character at that position
+      //   console.log(str.charAt(0));
+
+      //   // str.concat to concat the 2 strings
+      //   let conc = str.concat(" + " + str2);
+      //   console.log(conc);
+
+      //   const p =
+      //     "The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?";
+
+      //   console.log(p.replace("dog", "monkey"));
+      //   // expected output: "The quick brown fox jumps over the lazy monkey. If the dog reacted, was it really lazy?"
+
+      //   const regex = /Dog/i;
+      //   console.log(p.replace(regex, "ferret"));
+      //   // expected output: "The quick brown fox jumps over the lazy ferret. If the dog reacted, was it really lazy?"
+
+      //   // str.charCode() shows the character code of that character
+      //   console.log(str.charCodeAt(13));
+
+      //   const p = 'The quick brown fox jumps over the lazy dog. If the dog reacted, was it really lazy?';
+
+      // console.log(p.replaceAll('dog', 'monkey'));
+      // // expected output: "The quick brown fox jumps over the lazy monkey. If the monkey reacted, was it really lazy?"
+
+      // // global flag required when calling replaceAll with regex
+      // const regex = /Dog/ig;
+      // console.log(p.replaceAll(regex, 'ferret'));
+      // // expected output: "The quick brown fox jumps over the lazy ferret. If the ferret reacted, was it really lazy?"
+
+      //   // string.includes check that some part odf string is avaialable or included in the string or not.
+      //   console.log(str1.includes("is"));
+
+      //   // Join the array elements
+      //   const elements = ["Fire", "Air", "Water"];
+
+      //   console.log(elements.join());
+      //   // expected output: "Fire,Air,Water"
+
+      //   console.log(elements.join(""));
+      //   // expected output: "FireAirWater"
+
+      //   console.log(elements.join("-"));
+      //   // expected output: "Fire-Air-Water"
+
+      //   // to check string ends with specific character
+      //   if (str2.endsWith("Code")) {
+      //     console.log("True");
+      //   } else {
+      //     console.log("False");
+      //   }
+
+      //   // to check string start with specific character
+      //   if (str.startsWith("Wel")) {
+      //     console.log("str is start with Wel");
+      //   } else {
+      //     console.log("False");
+      //   }
+
+      //   // how concatenate working with numbers & string
+      //   let checkConcat = 1 + 3 + 5 + 4 + 2 + "ABC" + 2 + 1 + 4 + "XYZ";
+      //   console.log(checkConcat);
+
+      //   let checkConcat1 =
+      //     "QWERTY" + 1 + 3 + 5 + 4 + 2 + "ABC" + 2 + 1 + 4 + "XYZ";
+      //   console.log(checkConcat1);
+
+      //   let checkConcat2 =
+      //     "QWERTY" + 1 + 3 + (5 + 4 + 2) + "ABC" + 2 + (1 + 4) + "XYZ";
+      //   console.log(checkConcat2);
+
+      // const str = 'For more information, see Chapter 3.4.5.1';
+      // const re = /see (chapter \d+(\.\d)*)/i;
+      // const found = str.match(re);
+
+      // console.log(found);
+
+      // console.log(a);
+      // const a = 90;
+      // // var a = 90;
+      // // let a = 90;
+      // console.log(a);
+
+      // // IIFE -> Immediately Invoked Function Expression
+      // console.log("IIFE Function-> Traditional Function");
+
+      // (function (a,b){
+      //     let c = a + b;
+      //     console.log(c);
+      // })(4,5);
+
+      // console.log("IIFE Function-> Arrow Function");
+
+      // ((a,b) => {
+      // /* … */
+      //     let c = a + b;
+      //     console.log(c);
+      // })(3,4);
+
+      // // The switch statement evaluates an expression, matching the expression's value to a case clause, and executes statements associated with that case, as well as statements in cases that follow the matching case.
+      // const expr = 'Oranges';
+      // switch (expr) {
+      //                 case 'Oranges':
+      //                     console.log('Oranges are $0.59 a pound.');
+      //                     break;
+      //                 case 'Mangoes':
+      //                 case 'Papayas':
+      //                     console.log('Mangoes and papayas are $2.79 a pound.');
+      //                     // expected output: "Mangoes and papayas are $2.79 a pound."
+      //                     break;
+      //                 default:
+      //                     console.log(`Sorry, we are out of ${expr}.`);
+      // }
+
+      // // let Variable
+      // for (let i = 0; i < 5; i++) {
+      //     console.log(i);
+      // }
+      // console.log(i);
+
+      // // var Variable
+      // for (var j = 0; j < 5; j++) {
+      //     console.log(j);
+      // }
+      // console.log(j);
+
+      // Const Variable
+      // for (const a = 0; a < 5; a++) {
+      //     console.log(a);
+      // }
+      // console.log(a);
+
+      // Array & Object Destructuring
+      // let array3 = ['A', 'B', 'C', 'D', 'F', 'E', 'G'];
+      // let object1 = {name : 'Satya', address : "Rajuri", company : "Geospoc", position : "SDE1"};
+
+      // let [a,b,c,d,...r] = array3;
+      // console.log("a is "+a+ ", b is "+b+", c is "+c+", d is "+d+", rest is "+r);
+
+      // let {name, address, company, position} = object1;
+      // console.log("name is "+name+ ", address is "+address+", company is "+company+", position is "+position+" , ");
+
+      // Objects
+      // // object.keys() method -> shows the keys properties of object
+      // console.log("object.keys() method")
+      // const object1 = {
+      //                     a: 'somestring',
+      //                     b: 42,
+      //                     c: false
+      // };
+
+      // console.log(Object.keys(object1));
+      // // expected output: Array ["a", "b", "c"]
+
+      // // Object.freeze() method -> The Object.freeze() method freezes an object. A frozen object can no longer be changed; freezing an object prevents new properties from being added to it,
+      // console.log(" Object.freeze() method")
+      // const obj = {
+      //                 prop: 42
+      // };
+
+      // Object.freeze(obj);
+
+      // obj.prop = 33;
+      // obj.name = "satya";
+      //   // // Throws an error in strict mode
+      // console.log(obj.prop);
+      // console.log(obj.name);
+      // // // expected output: 42
+
+      // const arr10 = [1,2,3,35,34];
+
+      // Object.freeze(arr10);
+      // // arr10.push(123);
+      // console.log(arr10);
+      // console.log(arr10[5]);
+
+      // // The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object.
+      // console.log(" The Object.assign() method ");
+      // // const target = { a: 1, b: 2 };
+      // // const source = { b: 4, c: 5 };
+
+      // const target = { a: 1, b: 2, c: 3 };
+      // const source = { b: 4, c: 5, e: 7 };
+
+      // const returnedTarget = Object.assign(target, source);
+
+      // console.log(target);
+      // // expected output: Object { a: 1, b: 4, c: 5 }
+
+      // console.log(returnedTarget);
+      // // expected output: Object { a: 1, b: 4, c: 5 }
+
+      // // The Object.create() method creates a new object, using an existing object as the prototype of the newly created o
+      // console.log("The Object.create() method");
+      // const person = {
+      //                     isHuman: false,
+      //                     printIntroduction: function() {
+      //                         console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+      //                         console.log("My name is "+this.name+". Am I human? "+this.isHuman);
+      //                     }
+      // };
+
+      // const me = Object.create(person);
+
+      // me.name = 'Satya'; // "name" is a property set on "me", but not on "person"
+      // me.isHuman = true; // inherited properties can be overwritten
+
+      // me.printIntroduction();
+      // // expected output: "My name is Satya. Am I human? true"
+
+      // // Object.prototype.toString() -> The toString() method returns a string representing the objec
+      // console.log("Object.prototype.toString() -> The toString() method");
+      // function Dog(name) {
+      //          this.name = name;
+      // }
+
+      // const dog1 = new Dog('Tommy');
+
+      // // Dog.toString = function dogToString() {
+      // // return `${this.name}`;
+      // // return +this.name;
+      // // };
+
+      // Dog.prototype.toString = function dogToString() {
+      // return `${this.name}`;
+      // // return +this.name;
+      // //  console.log(this.name);
+      // };
+
+      // console.log(dog1.toString());
+      // // expected output: "Tommy"
+
+      // // Object.prototype.constructor - > The constructor property returns a reference to the Object constructor function that created the instance object. Note that the value of this property is a reference to the function itself, not a string containing the function's name.
+      // let o = {}
+      // // o.constructor === Object // true
+      // if (o.constructor === Object) {
+      //     console.log("true");
+      // }
+
+      // let o1 = new Object
+      // o1.constructor === Object // true
+
+      // let a = []
+      // a.constructor === Array // true
+
+      // let a1 = new Array
+      // a1.constructor === Array // true
+
+      // let n = new Number(3)
+      // n.constructor === Number // true
+
+      // classes
+      // unnamed
+      // let Rectangle = class {
+      //                         constructor(height, width) {
+      //                                                         this.height = height;
+      //                                                         this.width = width;
+      //                         }
+      // };
+      // console.log(Rectangle.name);
+      // // output: "Rectangle"
+
+      // // named
+      // Rectangle = class Rectangle2 {
+      //                                 constructor(height, width) {
+      //                                                                 this.height = height;
+      //                                                                 this.width = width;
+      //                                 }
+      // };
+      // console.log(Rectangle.name);
+      // // output: "Rectangle2"
+
+      // let arr9 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      // // console.log(delete arr9[2]);
+      // console.log(arr9);
+      // // arr9.splice(2,2,15,16);
+      // arr9.splice(2,1);
+      // console.log(arr9);
+
+      // function resolveAfter2Seconds() {
+      //     return new Promise(resolve => {
+      //         setTimeout(() => {
+      //         resolve('resolved');
+      //         }, 2000);
+      //     });
+      // }
+
+      //     async function asyncCall() {
+      //     console.log('calling');
+      //     const result = await resolveAfter2Seconds();
+      //     // console.log("hello");
+      //     console.log(result);
+      //     console.log("hello");
+      //     // expected output: "resolved"
+      // }
+
+      // asyncCall();
+
+      // let count = true;
+      // new Promise
+
+      // const myPromise = new Promise((resolve, reject) => {
+      //         setTimeout(() => {
+      //             resolve('foo');
+      //         }, 3000);
+      // });
+
+      //     let demo = true;
+      // let myPromise = new Promise(function(myResolve, myReject) {
+      // // "Producing Code" (May take some time)
+
+      //     setTimeout(() => {
+      //         if(demo) {
+
+      //         }
+      //                 // resolve('foo');
+      //                 // myResolve();
+      //             }, 3000);
+
+      // myResolve(); // when successful
+      // myReject();  // when error
+      // });
+
+      // // "Consuming Code" (Must wait for a fulfilled Promise)
+      // myPromise.then(
+      // function(value) { /* code if successful */
+      //     console.log(" It is true.");
+      // },
+      // function(error) { /* code if some error */
+      //     console.log("It is false ");
+      // }
+      // );
+
+      // // Callback Functions
+      // function greeting(name) {
+      //     alert('Hello ' + name);
+      // }
+
+      // function processUserInput(callback) {
+      //     var name = prompt('Please enter your name.');
+      //     // callback(name);
+      //     greeting(name);
+      // }
+
+      // processUserInput(greeting);
+
+      // var a =10;
+      // var a= 12;
+      // let b = 12;
+      // let b =125;
+      // console.log("scope"+a,b);
+
+      // function init() {
+      //     var name = 'Mozilla'; // name is a local variable created by init
+      //         function displayName() {
+      //             // displayName() is the inner function, a closure
+      //             console.log(name); // use variable declared in the parent function
+      //         }
+      //     displayName();
+      // }
+      // init();
+
+      // // this Keyword
+      // const test = {
+      //     prop: 42,
+      //     // top: 11,
+      //     func: function() {
+      //         // console.log(this.top);
+      //         return this.prop;
+      //     },
+      // };
+
+      // console.log(test.func());
+      // // expected output: 42
+
+      // var obj = {
+      //     x: 81,
+      //     getX: function() {
+      //         return this.x;
+      //     }
+      // };
+
+      // alert(obj.getX.bind(obj)());
+      // alert(obj.getX.call(obj));
+      // alert(obj.getX.apply(obj));
+
+      // // Apply() Method -> The apply() method calls a function with a given this value, and arguments provided as an array (or an array-like object).
+      // console.log("Apply() Method");
+
+      // const numbers = [5, 6, 2, 3, 7];
+
+      // const max = Math.max.apply(this,numbers);
+      // // const max = Math.max.apply(null, numbers);
+
+      // console.log(max);
+      // // expected output: 7
+
+      // const min = Math.min.apply(this,numbers);
+      // // const min = Math.min.apply(null, numbers);
+
+      // console.log(min);
+      // // expected output: 2
+
+      // // Function.prototype.bind() -> The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+      // console.log("Bind() Method");
+
+      // const module = {
+      //     x : 42,
+      //     getX : function() {
+      //         return this.x;
+      //     }
+      // };
+
+      // const unboundGetX = module.getX;
+      // console.log(unboundGetX()); // The function gets invoked at the global scope
+      // // expected output: undefined
+
+      // const boundGetX = unboundGetX.bind(module);
+      // console.log(boundGetX());
+      // // expected output: 42
+
+      // // Function.prototype.call() - > The call() method calls a function with a given this value and arguments provided individually.
+
+      // console.log("Call() method");
+      // function Product(name, price) {
+      //     this.name = name;
+      //     this.price = price;
+      // }
+
+      // function Food(name, price) {
+      //     Product.call(this, name, price);
+      //     this.category = 'food';
+      // }
+
+      // console.log(new Food('cheese', 5).name);
+      // // expected output: "cheese"
+
+      // // Function.prototype.toString() - >  The toString() method returns a string representing the source code of the function.
+      // function sum(a, b) {
+      //     return a + b;
+      // }
+
+      // console.log(sum.toString());
+      // // expected output: "function sum(a, b) {
+      // //                     return a + b;
+      // //                   }"
+
+      // console.log(Math.abs.toString());
+      // // expected output: "function abs() { [native code] }"
+
+      // Call()
+      // let name = {
+      //     firstName : "Satyawan",
+      //     lastName : "Auti",
+      //     // fullName : function () {
+      //     //     console.log(this.firstName +" "+this.lastName);
+      //     // }
+      // }
+
+      // let name = {
+      //     firstName : "Satyawan",
+      //     lastName : "Auti",
+
+      // };
+
+      // let fullName = function (hometown,state) {
+      //     // console.log(this.firstName + " " + this.lastName );
+      //     console.log(this.firstName + " " + this.lastName + " from " + hometown + " , " + state);
+      // };
+
+      // // name.fullName();
+      // // fullName.call(name);
+      // // fullName.call(name, "Rajuri","MH");
+      // fullName.call(name, "Rajuri", "MH");
+
+      // let name2 = {
+      //     firstName : "Priyanka",
+      //     lastName : "Auti"
+      // };
+
+      // // function borrowing
+      // console.log("function borrowing");
+      // // name.fullName.call(name2); ->all_in_one_js.html:886 Uncaught TypeError: Cannot read properties of undefined (reading 'call')
+      // // fullName.call(name2, "Rajuri", "MH");
+
+      // fullName.call(name2, "Bota", "MH");
+      // // in call() we pass agruments individually
+
+      // fullName.apply(name2, ["Bota", "MH"]);
+      // // in apply() method we pass agruments in array list
+
+      // // bind() -> invoke function / keep a copy of that method & use it later
+      // let printName = fullName.bind(name2,"Bota", "MH");
+      // console.log(printName);
+      // printName();
+
+      // // Default Parameter
+      // console.log("Function Default parameter");
+      // var ab;
+      // function sum(a,b) {
+      //     return (a+b);
+      //     var ab =10;
+      // }
+      // console.log(ab);
+      // console.log(sum(3,7));
+
+      // var x=12;
+      // var y=8;
+      // var res=eval('x+y');
+      // document.write(res);
+      // 20
+
+      // function solve(arr, rotations){
+      // if(rotations == 0) return arr;
+      // for(let i = 0; i < rotations; i++){
+      // let element = arr.pop();
+      // arr.unshift(element);
+      // console.log(arr);
+      // }
+      // console.log(arr);
+      // // return arr;
+      // }
+      // solve([44, 1, 22, 111], 5);
+      // // [111, 44, 1, 22]
+
+      // function Func()
+      // {
+      // document.getElementById("example").innerHTML=Math.sqrt(81);
+      // }
+      // // Func();
+      // // 9
+
+      // var a = Math.max();
+      // var b = Math.min();
+      // console.log(a);
+      // console.log(b);
+      // // print(a);
+      // // print(b);
+      // // -Infinity & Infinity
+
+      // var a = Math.max() < Math.min();
+      // var b = Math.max() > Math.min();
+      // console.log(a);
+      // console.log(b);
+      // // print(a);
+      // // print(b);
+      // // true & false
+
+      // var a = true + true + true * 3;
+      // console.log(a);
+      // 5
+
+      // console.log((NaN === NaN));
+      // // false
+
+      // // print(typeof(NaN));
+      // console.log((typeof(NaN)));
+      // // number
+
+      // let sum = 0;
+      // const a = [1, 2, 3];
+      // a.forEach(getSum);
+      // print(sum);
+      // function getSum(ele) {
+      // sum += ele;
+      // }
+      // // 6
+
+      // a = [1, 2, 3, 4, 5];
+      // // print(a.slice(2, 4));
+      // console.log((a.slice(2, 4)));
+      // // [3, 4]
+
+      // // print(parseInt("123Hello"));
+      // // print(parseInt("Hello123"));
+      // console.log((parseInt("123Hello")));
+      // console.log((parseInt("Hello123")));
+      // // 123 NaN
+
+      // let s = "00000001111111";
+      // let l = 0,
+      //   r = s.length - 1,
+      //   ans = -1;
+      // while (l <= r) {
+      //   console.log("r is: "+r);
+      //   var mid = Math.floor((l + r) / 2);
+      //   console.log("mid is : "+ mid);
+      //   if (s[mid] == "1") {
+      //     ans = mid;
+      //     r = mid - 1;
+      //   } else {
+      //     l = mid + 1;
+      //   }
+      // }
+      // console.log("ans is  : "+ans);
 
     </script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Welcome to GeoSpoc an ola company.</h1>
-</body>
+    <p id="example"></p>
+  </body>
 </html>
